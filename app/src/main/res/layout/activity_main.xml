@@ -1,18 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout   xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:baselineAligned="false"
+   >
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        style="@style/customVerticalLayout">
+
+        <TextView
+            style = "@style/textViewStyle"
+            android:textSize="25sp"
+            android:text="@string/team_a" />
+
+        <TextView
+            android:id="@+id/teamATextView"
+            style = "@style/scoreDisplayTextView"
+            android:text="0" />
+        <Button
+            android:id="@+id/sixPointButton"
+            style="@style/buttonStyle"
+            android:layout_marginTop="16dp"
+            android:text="@string/six"
+            android:onClick="AddSixPointForTeamA"/>
+        <Button
+            style="@style/buttonStyle"
+            android:text="@string/three"
+            android:onClick="AddThreePointForTeamA"/>
+        <Button
+            style="@style/buttonStyle"
+            android:text="@string/two"
+            android:onClick="AddTwoPointForTeamA"/>
+        <Button
+            style="@style/buttonStyle"
+            android:text="@string/one"
+            android:onClick="AddOnePointForTeamA"/>
+        <Button
+            style="@style/buttonStyle"
+            android:text="@string/restore_a"
+            android:onClick="restoreAValue"/>
+    </LinearLayout>
+    <View
+        android:layout_width="1dp"
+        android:layout_height="425dp"
+        android:background="@color/colorPrimaryDark">
+
+    </View>
+
+    <LinearLayout
+        style="@style/customVerticalLayout">
+
+        <TextView
+            style = "@style/textViewStyle"
+            android:textSize="25sp"
+            android:text="@string/team_b" />
+
+        <TextView
+            android:id="@+id/teamBTextView"
+            style = "@style/scoreDisplayTextView"
+            android:text="0" />
+        <Button
+            style="@style/buttonStyle"
+            android:layout_marginTop="16dp"
+            android:text="@string/sixB"
+            android:onClick="AddSixPointForTeamB"/>
+        <Button
+            style="@style/buttonStyle"
+            android:text="@string/threeB"
+            android:onClick="AddThreePointForTeamB"/>
+        <Button
+            style="@style/buttonStyle"
+            android:text="@string/twoB"
+            android:onClick="AddTwoPointForTeamB"/>
+        <Button
+            style="@style/buttonStyle"
+            android:text="@string/oneB"
+            android:onClick="AddOnePointForTeamB" />
+        <Button
+            style="@style/buttonStyle"
+            android:text="@string/restore_b"
+            android:onClick="restoreBValue"/>
+    </LinearLayout>
+
+</LinearLayout>
+    <Button
+        style="@style/resetButton"
+        android:text="@string/reset"
+        android:background="#ffa719"
+        android:onClick="resetScore"/>
+</RelativeLayout>

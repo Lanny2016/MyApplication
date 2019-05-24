@@ -1,3 +1,28 @@
 <resources>
+
     <string name="app_name">My Application</string>
+
+    <!-- BUTTON STRINGS FOR TEAM A-->
+    <string name="team_a">Team A</string>
+    <string name="six">+6 POINTS</string>
+    <string name="three">+3 POINTS</string>
+    <string name="two">+2 POINTS</string>
+    <string name="one">+1 POINTS</string>
+    <string name="restore_a">RESTORE</string>
+
+
+    <!-- BUTTON STRINGS FOR TEAM B-->
+    <string name="team_b">Team B</string>
+    <string name="sixB">+6 POINTS</string>
+    <string name="threeB">+3 POINTS</string>
+    <string name="twoB">+2 POINTS</string>
+    <string name="oneB">+1 POINTS</string>
+    <string name="restore_b">RESTORE</string>
+
+
+    <!-- RESET BUTTON STRING-->
+    <string name="reset">RESET</string>
+
+
+
 </resources>
